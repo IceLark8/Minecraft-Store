@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\Minecraft-Store\\Minecraft-Store.csproj",
-      "projectName": "Minecraft-Store",
-      "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\Minecraft-Store\\Minecraft-Store.csproj",
+      "projectUniqueName": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\Minecraft-Store\\MinecraftStore.MVC.csproj",
+      "projectName": "MinecraftStore.MVC",
+      "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\Minecraft-Store\\MinecraftStore.MVC.csproj",
       "packagesPath": "C:\\Users\\malet\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\Minecraft-Store\\obj\\",
       "projectStyle": "PackageReference",
