@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DB.Models.Entities.Abstarction
+namespace DB.Repositories.InterFaces
 {
-    public abstract class DbItem
+    public interface IFeedbackRepository
     {
-        public int Id { get; set; }
     }
 }

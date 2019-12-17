@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DB.Models.Entities.Abstarction;
 
 namespace DB.Models.Entities
 {
@@ -14,7 +15,7 @@ namespace DB.Models.Entities
         Good,
         Great
     }
-    public class Feedback
+    public class Feedback : DbItem<int>
     {
         public int UserId { get; set; }
         public int ItemId { get; set; }

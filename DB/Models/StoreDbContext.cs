@@ -20,11 +20,11 @@ namespace DB
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<CartItem>()
-                     .HasNoKey();
+            //builder.Entity<CartItem>()
+            //         .HasNoKey();
 
-            builder.Entity<Feedback>()
-                .HasNoKey();
+            //builder.Entity<Feedback>()
+            //    .HasNoKey();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

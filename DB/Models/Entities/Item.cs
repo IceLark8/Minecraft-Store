@@ -14,7 +14,7 @@ namespace DB.Models.Entities
         Flat
     }
 
-    public class Item : DbItem
+    public class Item : DbItem<int>
     {
         public string Name { get; set; }
         public string Description { get; set; }

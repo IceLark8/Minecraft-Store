@@ -14,7 +14,7 @@ namespace DB.Models.Entities
         Admin
     }
 
-    public class User : DbItem
+    public class User : DbItem<int>
     {
         public string Username { get; set; }
         public string Password { get; set; }

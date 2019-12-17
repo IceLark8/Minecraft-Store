@@ -7,7 +7,7 @@ using DB.Models.Entities.Abstarction;
 
 namespace DB.Models.Entities
 {
-    public class Comment : DbItem
+    public class Comment : DbItem<int>
     {
         public int UserId { get; set; }
         public int ItemId { get; set; }
