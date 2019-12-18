@@ -4,6 +4,37 @@
     "C:\\Users\\malet\\Desktop\\Minecraft-Store\\Minecraft-Store\\MinecraftStore.MVC.csproj": {}
   },
   "projects": {
+    "C:\\Users\\malet\\Desktop\\Minecraft-Store\\BLL\\MinecraftStore.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\BLL\\MinecraftStore.BLL.csproj",
+        "projectName": "MinecraftStore.BLL",
+        "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\BLL\\MinecraftStore.BLL.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\malet\\Desktop\\Minecraft-Store\\DB\\MinecraftStore.DAL.csproj": {
+                "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\DB\\MinecraftStore.DAL.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\malet\\Desktop\\Minecraft-Store\\DB\\MinecraftStore.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\DB\\MinecraftStore.DAL.csproj",
+        "projectName": "MinecraftStore.DAL",
+        "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\DB\\MinecraftStore.DAL.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Users\\malet\\Desktop\\Minecraft-Store\\Minecraft-Store\\MinecraftStore.MVC.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -30,7 +61,11 @@
         },
         "frameworks": {
           "netcoreapp3.0": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\malet\\Desktop\\Minecraft-Store\\BLL\\MinecraftStore.BLL.csproj": {
+                "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\BLL\\MinecraftStore.BLL.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

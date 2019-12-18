@@ -1,11 +1,46 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {}
+    ".NETCoreApp,Version=v3.0": {
+      "MinecraftStore.BLL/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "MinecraftStore.DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MinecraftStore.BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MinecraftStore.BLL.dll": {}
+        }
+      },
+      "MinecraftStore.DAL/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/MinecraftStore.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MinecraftStore.DAL.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MinecraftStore.BLL/1.0.0": {
+      "type": "project",
+      "path": "../BLL/MinecraftStore.BLL.csproj",
+      "msbuildProject": "../BLL/MinecraftStore.BLL.csproj"
+    },
+    "MinecraftStore.DAL/1.0.0": {
+      "type": "project",
+      "path": "../DB/MinecraftStore.DAL.csproj",
+      "msbuildProject": "../DB/MinecraftStore.DAL.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": []
+    ".NETCoreApp,Version=v3.0": [
+      "MinecraftStore.BLL >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\malet\\.nuget\\packages\\": {},
@@ -37,7 +72,11 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\malet\\Desktop\\Minecraft-Store\\BLL\\MinecraftStore.BLL.csproj": {
+              "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\BLL\\MinecraftStore.BLL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

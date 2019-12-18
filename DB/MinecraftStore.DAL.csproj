@@ -8,8 +8,8 @@
     <ProjectGuid>{9C3B0372-31BD-452F-9439-8694BDE4CFE2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DB</RootNamespace>
-    <AssemblyName>DB</AssemblyName>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -138,6 +138,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigureDBExtension.cs" />
     <Compile Include="Migrations\20191216235629_firstMigr.cs" />
     <Compile Include="Migrations\20191216235629_firstMigr.designer.cs">
       <DependentUpon>20191216235629_firstMigr.cs</DependentUpon>

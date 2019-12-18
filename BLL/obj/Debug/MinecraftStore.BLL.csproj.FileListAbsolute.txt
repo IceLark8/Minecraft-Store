@@ -1,0 +1,9 @@
+C:\Users\malet\Desktop\Minecraft-Store\BLL\bin\Debug\BLL.dll
+C:\Users\malet\Desktop\Minecraft-Store\BLL\bin\Debug\BLL.pdb
+C:\Users\malet\Desktop\Minecraft-Store\BLL\bin\Debug\AutoMapper.dll
+C:\Users\malet\Desktop\Minecraft-Store\BLL\bin\Debug\AutoMapper.pdb
+C:\Users\malet\Desktop\Minecraft-Store\BLL\bin\Debug\AutoMapper.xml
+C:\Users\malet\Desktop\Minecraft-Store\BLL\obj\Debug\MinecraftStore.BLL.csprojAssemblyReference.cache
+C:\Users\malet\Desktop\Minecraft-Store\BLL\obj\Debug\MinecraftStore.BLL.csproj.CopyComplete
+C:\Users\malet\Desktop\Minecraft-Store\BLL\obj\Debug\BLL.dll
+C:\Users\malet\Desktop\Minecraft-Store\BLL\obj\Debug\BLL.pdb
