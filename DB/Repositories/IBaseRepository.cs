@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using DB.Models.Entities.Abstarction;
+using DAL.Models.Entities.Abstarction;
 
-namespace DB.Repositories
+namespace DAL.Repositories
 {
     public interface IBaseRepository<TEntity, TId> where TEntity : class, IDbItem<TId>
     {

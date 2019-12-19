@@ -7,7 +7,7 @@ using BLL.DTOs;
 
 namespace BLL.Services.Interfaces
 {
-    interface ICommentService : ICrudService<CommentDTO>
+    public interface ICommentService : ICrudService<CommentDTO>
     {
     }
 }

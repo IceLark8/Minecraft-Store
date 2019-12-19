@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DB.Models.Entities.Abstarction;
+using DAL.Models.Entities.Abstarction;
 
-namespace DB.Models.Entities
+namespace DAL.Models.Entities
 {
     public enum Category
     {

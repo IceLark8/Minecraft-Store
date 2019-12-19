@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
-using DB.Models.Entities.Abstarction;
+using DAL.Models.Entities.Abstarction;
 
 
-namespace DB.Repositories
+namespace DAL.Repositories
 {
     public class BaseRepository<TEntity, TId> : IBaseRepository<TEntity, TId> where TEntity : class, IDbItem<TId>
     {

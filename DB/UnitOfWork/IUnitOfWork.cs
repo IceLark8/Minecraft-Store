@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DB.Repositories.InterFaces;
+using DAL.Repositories.InterFaces;
 
-namespace DB.UnitOfWork
+namespace DAL.UnitOfWork
 {
     public interface IUnitOfWork : IDisposable
     {

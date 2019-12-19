@@ -4,24 +4,24 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using DB.Repositories.Impl;
-using DB.Repositories.InterFaces;
-using DB.UnitOfWork;
-using DB;
+using DAL.Repositories.Impl;
+using DAL.Repositories.InterFaces;
+using DAL.UnitOfWork;
+using DAL;
 using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
 
-namespace DB
+namespace DAL
 {
     public static class ConfigureDBExtension
     {
-        public static void ConfigureDb(
+        public static void ConfigureDAL(
             this IServiceCollection services,
             IConfiguration configuration)
         {
             services.ConfigureRepositories();
             services.ConfigureDbContext(configuration);
 
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
         }
 
         private static void ConfigureRepositories(this IServiceCollection services)
@@ -39,11 +39,11 @@ namespace DB
         {
             void ConfigureConnection(DbContextOptionsBuilder options)
             {
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
-                    b => b.MigrationsAssembly("StudVoice.DAL"));
+                options.UseSqlServer("Server=localhost;Database=MinecraftStore;Trusted_Connection=True;");
             }
 
             services.AddDbContext<StoreDbContext>(ConfigureConnection);
         }
     }
 }
+   

@@ -46,7 +46,7 @@
       <summary>查詢傳回單一結果集。</summary>
     </member>
     <member name="F:System.Data.CommandBehavior.SingleRow">
-      <summary>查詢預期會傳回第一個結果集的單一資料列。執行查詢可能會影響資料庫狀態。某些 .NET Framework 資料提供者可以使用這項資訊來最佳化命令的效能，但並不一定需要使用。當您使用 <see cref="T:System.Data.OleDb.OleDbCommand" /> 物件的 <see cref="M:System.Data.OleDb.OleDbCommand.ExecuteReader" /> 方法來指定 <see cref="F:System.Data.CommandBehavior.SingleRow" /> 時，.NET Framework Data Provider for OLE DB 會使用 OLE DB IRow 介面 (如果可用) 來執行繫結。否則，它會使用 IRowset 介面。如果 SQL 陳述式預期只會傳回單一資料列，則指定 <see cref="F:System.Data.CommandBehavior.SingleRow" /> 也可以增進應用程式效能。在執行預期會傳回多個結果集的要求時，可能指定 SingleRow。在這種情況下，也就是同時指定多結果集 SQL 查詢及單一資料列時，傳回的結果將只會包含第一個結果集中的第一個資料列，而不會傳回查詢的其他結果集。</summary>
+      <summary>查詢預期會傳回第一個結果集的單一資料列。執行查詢可能會影響資料庫狀態。某些 .NET Framework 資料提供者可以使用這項資訊來最佳化命令的效能，但並不一定需要使用。當您使用 <see cref="T:System.Data.OleDb.OleDbCommand" /> 物件的 <see cref="M:System.Data.OleDb.OleDbCommand.ExecuteReader" /> 方法來指定 <see cref="F:System.Data.CommandBehavior.SingleRow" /> 時，.NET Framework Data Provider for OLE DAL 會使用 OLE DAL IRow 介面 (如果可用) 來執行繫結。否則，它會使用 IRowset 介面。如果 SQL 陳述式預期只會傳回單一資料列，則指定 <see cref="F:System.Data.CommandBehavior.SingleRow" /> 也可以增進應用程式效能。在執行預期會傳回多個結果集的要求時，可能指定 SingleRow。在這種情況下，也就是同時指定多結果集 SQL 查詢及單一資料列時，傳回的結果將只會包含第一個結果集中的第一個資料列，而不會傳回查詢的其他結果集。</summary>
     </member>
     <member name="T:System.Data.CommandType">
       <summary>指定如何解譯命令字串。</summary>

@@ -47,7 +47,7 @@
       <summary>このクエリは単一の結果セットを返します。</summary>
     </member>
     <member name="F:System.Data.CommandBehavior.SingleRow">
-      <summary>クエリは、最初の結果セットの 1 行を返します。このクエリを実行すると、データベースの状態に影響を与えることがあります。一部の .NET Framework データ プロバイダーではこの情報を使用してコマンドのパフォーマンスを最適化することもできますが、この情報の使用は必須ではありません。<see cref="T:System.Data.OleDb.OleDbCommand" /> オブジェクトの <see cref="M:System.Data.OleDb.OleDbCommand.ExecuteReader" /> メソッドで <see cref="F:System.Data.CommandBehavior.SingleRow" /> を指定すると、OLE DB IRow インターフェイスが使用できる場合、.NET Framework OLE DB 用データ プロバイダーは、このインターフェイスを使用してバインドを実行します。それ以外の場合は、IRowset インターフェイスを使用します。単一行だけを返す SQL ステートメントを使用する場合は、<see cref="F:System.Data.CommandBehavior.SingleRow" /> を指定すると、アプリケーションのパフォーマンスも向上します。複数の結果セットを返すクエリを実行する場合は、SingleRow を指定できます。その場合、複数の結果セットの SQL クエリと単一行の両方が指定されていると、返される結果には、最初の結果セットの 1 行目のみが含まれます。クエリの他の結果セットは返されません。</summary>
+      <summary>クエリは、最初の結果セットの 1 行を返します。このクエリを実行すると、データベースの状態に影響を与えることがあります。一部の .NET Framework データ プロバイダーではこの情報を使用してコマンドのパフォーマンスを最適化することもできますが、この情報の使用は必須ではありません。<see cref="T:System.Data.OleDb.OleDbCommand" /> オブジェクトの <see cref="M:System.Data.OleDb.OleDbCommand.ExecuteReader" /> メソッドで <see cref="F:System.Data.CommandBehavior.SingleRow" /> を指定すると、OLE DAL IRow インターフェイスが使用できる場合、.NET Framework OLE DAL 用データ プロバイダーは、このインターフェイスを使用してバインドを実行します。それ以外の場合は、IRowset インターフェイスを使用します。単一行だけを返す SQL ステートメントを使用する場合は、<see cref="F:System.Data.CommandBehavior.SingleRow" /> を指定すると、アプリケーションのパフォーマンスも向上します。複数の結果セットを返すクエリを実行する場合は、SingleRow を指定できます。その場合、複数の結果セットの SQL クエリと単一行の両方が指定されていると、返される結果には、最初の結果セットの 1 行目のみが含まれます。クエリの他の結果セットは返されません。</summary>
     </member>
     <member name="T:System.Data.CommandType">
       <summary>コマンド文字列の解釈方法を指定します。</summary>

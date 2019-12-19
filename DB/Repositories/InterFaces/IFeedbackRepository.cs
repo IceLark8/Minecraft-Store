@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DB.Models.Entities;
+using DAL.Models.Entities;
 
-namespace DB.Repositories.InterFaces
+namespace DAL.Repositories.InterFaces
 {
     public interface IFeedbackRepository : IBaseRepository<Feedback, int>
     {

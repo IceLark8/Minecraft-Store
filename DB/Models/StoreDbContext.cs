@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using DB.Models.Entities;
+using DAL.Models.Entities;
 
-namespace DB
+namespace DAL
 {
     public class StoreDbContext : DbContext
     {
@@ -13,19 +13,19 @@ namespace DB
         public DbSet<Comment> Comments { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
 
-        public StoreDbContext()
-        {
-            Database.EnsureCreated();
-        }
+        public StoreDbContext(DbContextOptions<StoreDbContext> options): base(options)
+        {}
 
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            //builder.Entity<CartItem>()
-            //         .HasNoKey();
+        public StoreDbContext() { }
 
-            //builder.Entity<Feedback>()
-            //    .HasNoKey();
-        }
+        //protected override void OnModelCreating(ModelBuilder builder)
+        //{
+        //    //builder.Entity<CartItem>()
+        //    //         .HasNoKey();
+
+        //    //builder.Entity<Feedback>()
+        //    //    .HasNoKey();
+        //}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -46,7 +46,7 @@
       <summary>查询返回一个结果集。</summary>
     </member>
     <member name="F:System.Data.CommandBehavior.SingleRow">
-      <summary>查询应返回结果集中的单个行。执行查询可能会影响数据库的状态。一些 .NET Framework 数据提供程序可能（但不要求）使用此信息来优化命令的性能。用 <see cref="T:System.Data.OleDb.OleDbCommand" /> 对象的 <see cref="M:System.Data.OleDb.OleDbCommand.ExecuteReader" /> 方法指定 <see cref="F:System.Data.CommandBehavior.SingleRow" /> 时，用于 OLE DB 的 .NET Framework 数据提供程序使用 OLE DB IRow 接口（如果可用）执行绑定。否则，它使用 IRowset 接口。如果您的 SQL 语句应该只返回一行，则指定 <see cref="F:System.Data.CommandBehavior.SingleRow" /> 还可以提高应用程序性能。在执行应返回多个结果集的查询时，可以指定 SingleRow。在这种情况下，同时指定了多结果集 SQL 查询和单行，返回的结果将仅包含第一个结果集的第一行。将不返回查询的其他结果集。</summary>
+      <summary>查询应返回结果集中的单个行。执行查询可能会影响数据库的状态。一些 .NET Framework 数据提供程序可能（但不要求）使用此信息来优化命令的性能。用 <see cref="T:System.Data.OleDb.OleDbCommand" /> 对象的 <see cref="M:System.Data.OleDb.OleDbCommand.ExecuteReader" /> 方法指定 <see cref="F:System.Data.CommandBehavior.SingleRow" /> 时，用于 OLE DAL 的 .NET Framework 数据提供程序使用 OLE DAL IRow 接口（如果可用）执行绑定。否则，它使用 IRowset 接口。如果您的 SQL 语句应该只返回一行，则指定 <see cref="F:System.Data.CommandBehavior.SingleRow" /> 还可以提高应用程序性能。在执行应返回多个结果集的查询时，可以指定 SingleRow。在这种情况下，同时指定了多结果集 SQL 查询和单行，返回的结果将仅包含第一个结果集的第一行。将不返回查询的其他结果集。</summary>
     </member>
     <member name="T:System.Data.CommandType">
       <summary>指定如何解释命令字符串。</summary>

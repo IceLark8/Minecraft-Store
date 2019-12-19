@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using BLL.Services.Interfaces;
 using BLL.DTOs;
 using AutoMapper;
-using DB.Models.Entities;
-using DB.UnitOfWork;
-using DB.Repositories;
+using DAL.Models.Entities;
+using DAL.UnitOfWork;
+using DAL.Repositories;
 
 namespace BLL.Services.Impl
 {
-    class FeedbackService : IFeedbackService
+    public class FeedbackService : IFeedbackService
     {
         private readonly IMapper _mapper;
         private readonly IUnitOfWork _unitOfWork;

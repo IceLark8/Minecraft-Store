@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
-using DB.Repositories.InterFaces;
+using DAL.Repositories.InterFaces;
 
-namespace DB.UnitOfWork
+namespace DAL.UnitOfWork
 {
     class UnitOfWork : IUnitOfWork
     {

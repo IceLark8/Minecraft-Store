@@ -7,7 +7,7 @@ using BLL.DTOs;
 
 namespace BLL.Services.Interfaces
 {
-    interface IFeedbackService : ICrudService<FeedbackDTO>
+    public interface IFeedbackService : ICrudService<FeedbackDTO>
     {
     }
 }

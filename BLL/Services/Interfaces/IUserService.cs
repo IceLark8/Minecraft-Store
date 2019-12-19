@@ -7,7 +7,7 @@ using BLL.DTOs;
 
 namespace BLL.Services.Interfaces
 {
-    interface IUserService : ICrudService<UserDTO>
+    public interface IUserService : ICrudService<UserDTO>
     {
     }
 }

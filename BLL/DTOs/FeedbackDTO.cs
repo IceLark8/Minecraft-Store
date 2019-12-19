@@ -14,7 +14,7 @@ namespace BLL.DTOs
         Good,
         Great
     }
-    class FeedbackDTO
+    public class FeedbackDTO
     {
         public int Id { get; set; }
         public int UserId { get; set; }

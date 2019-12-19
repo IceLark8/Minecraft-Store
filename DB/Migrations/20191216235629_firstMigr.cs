@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace DB.Migrations
+namespace DAL.Migrations
 {
     public partial class firstMigr : Migration
     {

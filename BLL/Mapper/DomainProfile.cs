@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using AutoMapper;
 using System.Text;
 using BLL.DTOs;
-using DB.Models.Entities;
+using DAL.Models.Entities;
 
 namespace BLL.Mapper
 {

@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using BLL.Mapper;
 using BLL.Services.Impl;
 using BLL.Services.Interfaces;
-using DB;
+using DAL;
 using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
 
 namespace BLL
@@ -15,7 +15,7 @@ namespace BLL
             services.ConfigureAutoMapper();
             services.ConfigureServices();
             
-            services.ConfigureDb(configuration);
+            services.ConfigureDAL(configuration);
         }
 
         private static void ConfigureServices(this IServiceCollection services)

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DB.Models.Entities;
-using DB.Repositories.InterFaces;
+using DAL.Models.Entities;
+using DAL.Repositories.InterFaces;
 
-namespace DB.Repositories.Impl
+namespace DAL.Repositories.Impl
 {
     public class CartItemRepository : BaseRepository<CartItem, int>, ICartItemRepository
     {

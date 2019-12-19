@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DB.Models.Entities.Abstarction
+namespace DAL.Models.Entities.Abstarction
 {
     public abstract class DbItem<T> : IDbItem<T>
     {
