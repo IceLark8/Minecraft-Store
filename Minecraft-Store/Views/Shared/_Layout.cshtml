@@ -14,11 +14,15 @@
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Minecraft Store</a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Register">Register</a>
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
                 @{string userId = Context.Request.Cookies["user"];}
                 @if (userId != "0")
                 {
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Logout">Logout</a>
                     <a class="navbar-brand" onclick="location.href='@Url.Action("Cart","Home",new { userId = Int32.Parse(userId ?? "0")})'">Cart</a>
+                }
+                else
+                {
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
                 }
 
             </div>

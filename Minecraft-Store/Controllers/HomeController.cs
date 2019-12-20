@@ -46,6 +46,31 @@ namespace Minecraft_Store.Controllers
             List<ItemDTO> items = (await _itemService.GetAll()).ToList();
             return View("~/Views/Home/Shop.cshtml", (items, userId));
         }
+
+        public async Task<IActionResult> Cart(int userId)
+        {
+            if(userId != 0)
+            {
+                List<CartItemDTO> cartItems = (await _cartItemService.GetAll()).ToList();
+                cartItems = cartItems.Where(x => x.UserId == userId).Select(x => x).ToList();
+                List<ItemDTO> items = (await _itemService.GetAll()).ToList();
+                items = items.Where(x => cartItems.Select(y => y.ItemId).ToList().Contains(x.Id)).Select(x => x).ToList();
+                cartItems = cartItems.OrderBy(x => x.ItemId).ToList();
+                items = items.OrderBy(x => x.Id).ToList();
+                var list = new List<(CartItemDTO, ItemDTO)>() { };
+                for(int i = 0; i < cartItems.Count; i++)
+                {
+                    list.Add((cartItems[i], items[i]));
+                }
+
+                return View("~/Views/Home/Cart.cshtml", list);
+            }
+            else
+            {
+                return await Index();
+            }
+        }
+
         public IActionResult Register()
         {
             UserDTO user = new UserDTO();
