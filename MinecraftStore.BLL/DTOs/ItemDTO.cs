@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BLL.DTOs
+{
+    public enum Category
+    {
+        Static = 0,
+        Dynamic,
+        Flat
+    }
+
+    public class ItemDTO
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public Category Category { get; set; }
+        public decimal Price { get; set; }
+    }
+}

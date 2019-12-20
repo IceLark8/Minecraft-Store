@@ -9,6 +9,7 @@ using Minecraft_Store.Models;
 using BLL.Services.Interfaces;
 using BLL.Services.Impl;
 using BLL.DTOs;
+using Microsoft.AspNetCore.Http;
 
 namespace Minecraft_Store.Controllers
 {
@@ -40,8 +41,58 @@ namespace Minecraft_Store.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var items = await _itemService.GetAll();
-            return View(items);
+            List<UserDTO> users = (await _userService.GetAll()).ToList();
+            var userId = Int32.Parse(Request.Cookies["user"] ?? "0");
+            List<ItemDTO> items = (await _itemService.GetAll()).ToList();
+            return View("~/Views/Home/Shop.cshtml", (items, userId));
+        }
+        public IActionResult Register()
+        {
+            UserDTO user = new UserDTO();
+            return View("~/Views/Home/Register.cshtml", user);
+        }
+
+        public async Task<IActionResult> AddToCart(int userId, int itemId)
+        {
+            CartItemDTO cartItem = new CartItemDTO() { UserId = userId, ItemId = itemId, Count = 1 };
+            await _cartItemService.Add(cartItem);
+            return await Index();
+        }
+
+        public async Task<IActionResult> RegisterUser(UserDTO newUser)
+        {
+            await _userService.Add(newUser);
+
+            return await Index();
+        }
+
+        public IActionResult Login()
+        {
+            UserDTO user = new UserDTO();
+            return View("~/Views/Home/Login.cshtml", user);
+        }
+
+        public async Task<IActionResult> LoginUser(UserDTO newUser)
+        {
+            var users = await _userService.GetAll();
+
+            UserDTO user = users.Where(x => x.Username == newUser.Username && x.Password == newUser.Password).Select(x => x).FirstOrDefault();
+            if (user != null)
+            {
+                CookieOptions option = new CookieOptions();
+
+                option.Expires = DateTime.Now.AddMinutes(5);
+                
+                Response.Cookies.Delete("user");
+
+                Response.Cookies.Append("user", user.Id.ToString(), option);
+
+                return await Index();
+            }
+            else
+            {
+                return Login();
+            }
         }
 
         public IActionResult Privacy()

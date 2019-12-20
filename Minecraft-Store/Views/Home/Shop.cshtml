@@ -1,0 +1,63 @@
+﻿@using BLL.DTOs;
+@using Microsoft.AspNetCore.Mvc
+
+@model (List<ItemDTO>, int)
+@{
+    ViewData["Title"] = "Main Page";
+}
+
+<div class="text-center container flex-column">
+    <div class="container flex-sm-grow-0">
+
+    </div>
+    <div class="container d-flex flex-row flex-wrap" style="max-width: 100%">
+        @foreach (ItemDTO item in Model.Item1)
+        {
+            <div class="container text-center border" style=" max-width: 30%; margin: 1%">
+                <h3>@item.Name</h3>
+                <h7>@item.Category</h7>
+                <h5>@item.Price</h5>
+                <p>@item.Description</p>
+
+                @if(Model.Item2 != 0){
+                    <a id="@Model.Item2|@item.Id" class="btn btn-outline-primary add-item">
+                Add to cart</a>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    var xhttp = new XMLHttpRequest();
+
+    var id;
+    document.querySelector('.add-item').addEventListener('click', function(e){ // Вешаем обработчик клика на UL, не LI
+        id = e.target.id; // Получили ID, т.к. в e.target содержится элемент по которому кликнули
+
+        var userId = id.split("|")[0];
+        var itemId = id.split("|")[1];
+
+        xhttp.open("POST", "@Url.Action("AddToCart", "Home")", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(`userId=${userId}&itemId=${itemId}`);
+    });
+
+
+
+
+    @*jQuery(".add-item").click(function () {
+        
+
+
+        jQuery.ajax({
+            url: "@Url.Action("AddToCart", "Home")",
+            contentType: "application/json",
+            type: 'POST',
+            data: JSON.stringify({
+                userId: id.split("|")[0],
+                itemId: id.split("|")[1]
+            }),
+        });
+    });*@
+</script>

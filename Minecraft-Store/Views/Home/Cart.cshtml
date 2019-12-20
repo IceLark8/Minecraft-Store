@@ -1,0 +1,26 @@
+﻿@using BLL.DTOs;
+
+@model List<(CartItemDTO, ItemDTO)>
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<div class="text-center container flex-column">
+    <div class="container flex-sm-grow-0">
+
+    </div>
+    <div class="container d-flex flex-column flex-wrap" style="max-width: 100%">
+        @foreach ((CartItemDTO, ItemDTO) item in Model)
+        {
+        <div class="container text-center border" style=" max-width: 80%; margin: 10% 1%">
+            <h3>@item.Item2.Name</h3>
+            <h7>@item.Item2.Description</h7>
+            <h5>@item.Item2.Category</h5>
+            @{var fullPrice = item.Item2.Price * item.Item1.Count;}
+            <p>@fullPrice</p>
+            <a id="add" class="btn">+</a>
+            <a id="rem" class="btn">-</a>
+        </div>
+        }
+    </div>
+</div>

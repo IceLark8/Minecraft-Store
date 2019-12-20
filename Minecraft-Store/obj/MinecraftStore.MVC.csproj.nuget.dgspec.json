@@ -4,37 +4,6 @@
     "C:\\Users\\malet\\Desktop\\Minecraft-Store\\Minecraft-Store\\MinecraftStore.MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\malet\\Desktop\\Minecraft-Store\\BLL\\MinecraftStore.BLL.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\BLL\\MinecraftStore.BLL.csproj",
-        "projectName": "MinecraftStore.BLL",
-        "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\BLL\\MinecraftStore.BLL.csproj",
-        "frameworks": {
-          "net472": {
-            "projectReferences": {
-              "C:\\Users\\malet\\Desktop\\Minecraft-Store\\DB\\MinecraftStore.DAL.csproj": {
-                "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\DB\\MinecraftStore.DAL.csproj"
-              }
-            }
-          }
-        }
-      },
-      "frameworks": {
-        "net472": {}
-      }
-    },
-    "C:\\Users\\malet\\Desktop\\Minecraft-Store\\DB\\MinecraftStore.DAL.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\DB\\MinecraftStore.DAL.csproj",
-        "projectName": "MinecraftStore.DAL",
-        "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\DB\\MinecraftStore.DAL.csproj"
-      },
-      "frameworks": {
-        "net472": {}
-      }
-    },
     "C:\\Users\\malet\\Desktop\\Minecraft-Store\\Minecraft-Store\\MinecraftStore.MVC.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -62,8 +31,11 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\malet\\Desktop\\Minecraft-Store\\BLL\\MinecraftStore.BLL.csproj": {
-                "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\BLL\\MinecraftStore.BLL.csproj"
+              "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.BLL\\MinecraftStore.BLL.csproj": {
+                "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.BLL\\MinecraftStore.BLL.csproj"
+              },
+              "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.DAL\\MinecraftStore.DAL.csproj": {
+                "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.DAL\\MinecraftStore.DAL.csproj"
               }
             }
           }
@@ -83,11 +55,21 @@
               "target": "Package",
               "version": "[3.1.0, )"
             },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Microsoft.Extensions.Caching.Abstractions": {
               "target": "Package",
               "version": "[3.1.0, )"
             },
             "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[3.1.0, )"
             },
@@ -99,6 +81,10 @@
               "target": "Package",
               "version": "[3.1.0, )"
             },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
               "version": "[3.1.0, )"
@@ -106,6 +92,26 @@
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.IdentityModel.Logging": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.jQuery.Unobtrusive.Ajax": {
+              "target": "Package",
+              "version": "[3.2.6, )"
+            },
+            "Microsoft.jQuery.Unobtrusive.Validation": {
+              "target": "Package",
+              "version": "[3.2.11, )"
             },
             "System.Collections.Immutable": {
               "target": "Package",
@@ -126,6 +132,10 @@
             "System.Diagnostics.PerformanceCounter": {
               "target": "Package",
               "version": "[4.7.0, )"
+            },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.4.1, )"
             }
           },
           "imports": [
@@ -142,6 +152,206 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.BLL\\MinecraftStore.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.BLL\\MinecraftStore.BLL.csproj",
+        "projectName": "BLL",
+        "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.BLL\\MinecraftStore.BLL.csproj",
+        "packagesPath": "C:\\Users\\malet\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\malet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.DAL\\MinecraftStore.DAL.csproj": {
+                "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.DAL\\MinecraftStore.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.DAL\\MinecraftStore.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.DAL\\MinecraftStore.DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.DAL\\MinecraftStore.DAL.csproj",
+        "packagesPath": "C:\\Users\\malet\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\malet\\Desktop\\Minecraft-Store\\MinecraftStore.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\malet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.Bcl.AsyncInterfaces": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.Bcl.HashCode": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Analyzers": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

@@ -1,0 +1,24 @@
+﻿@using BLL.DTOs;
+
+@model UserDTO
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center container flex-column">
+    <div class="container flex-sm-grow-0">
+
+    </div>
+    <div class="container" style="max-width: 50%">
+        <form method="post" action="/Home/RegisterUser">
+            <h3>Register</h3>
+            <br />
+            @Html.TextBoxFor(m => Model.Username, new { @class = "form-control", @placeholder = "Enter usrname", @requried = "required" })
+            <br />
+            @Html.TextBoxFor(m => Model.Password, new { @class = "form-control", @placeholder = "Enter password", @requried = "required" })
+            <br />
+            <input type="submit" name="regUser" value="Register" />
+        </form>
+    </div>
+</div>

@@ -30,6 +30,7 @@ namespace Minecraft_Store
             services.AddHealthChecks();
             services.ConfigureBLL(Configuration);
             services.AddControllers();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +42,7 @@ namespace Minecraft_Store
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
+            //app.UseMvc();
 
             //app.UseAuthorization();
 
